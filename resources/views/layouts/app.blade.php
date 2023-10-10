@@ -34,5 +34,6 @@
         </div>
 
         <livewire:modals.first-modal />
+        <livewire:modals.second-modal />
     </body>
 </html>
