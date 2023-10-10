@@ -32,5 +32,7 @@
                 {{ $slot }}
             </main>
         </div>
+
+        <livewire:modals.first-modal />
     </body>
 </html>
