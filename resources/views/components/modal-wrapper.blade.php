@@ -2,6 +2,7 @@
     class="relative z-10"
     x-data="{ visible: @entangle($attributes->wire('model')), now: null }"
     x-show="visible"
+    x-trap.inert.noscroll="visible"
     x-on:keydown.escape.window="Livewire.dispatchTo(null, '{{ $this->getName() }}', 'hide')"
     x-init="
         $watch('visible', (value) => {
