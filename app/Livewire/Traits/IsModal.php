@@ -18,5 +18,7 @@ trait IsModal
     public function hide()
     {
         $this->visible = false;
+
+        $this->dispatch('hidden')->self();
     }
 }
