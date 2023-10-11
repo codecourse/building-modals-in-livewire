@@ -1,8 +1,14 @@
 <div
     class="relative z-10"
-    x-data="{ visible: @entangle($attributes->wire('model')) }"
+    x-data="{ visible: @entangle($attributes->wire('model')), now: null }"
     x-show="visible"
     x-on:keydown.escape.window="visible = false"
+    x-init="
+        $watch('visible', (value) => {
+            now = Math.ceil(performance.now() / 1000)
+        })
+    "
+    :style="`z-index: ${now}`"
 >
     <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
