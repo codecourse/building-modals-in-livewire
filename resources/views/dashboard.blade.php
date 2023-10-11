@@ -15,6 +15,9 @@
                     <div>
                         <button x-data x-on:click="Livewire.dispatchTo(null, 'modals.second-modal', 'show')">Open second modal</button>
                     </div>
+                    <div>
+                        <button x-data x-on:click="$modal('modals.first-modal')">Open first modal</button>
+                    </div>
                 </div>
             </div>
         </div>

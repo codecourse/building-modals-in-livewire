@@ -35,5 +35,7 @@
 
         <livewire:modals.first-modal />
         <livewire:modals.second-modal />
+
+        @livewireScriptConfig
     </body>
 </html>
